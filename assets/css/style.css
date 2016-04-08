@@ -89,3 +89,11 @@ h1 {
 .result {
   margin-top: 15px;
 }
+
+.headimg {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
