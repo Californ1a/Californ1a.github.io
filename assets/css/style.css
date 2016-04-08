@@ -62,7 +62,6 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
-  .header,
   .marketing,
   .footer {
     padding-left: 0;
@@ -80,6 +79,11 @@ body {
 
 h1 {
 	font-size: 140px !important;
+	color: #fff !important;
+}
+
+.jumbotron {
+	background-color: #141414 !important;
 }
 
 .result {
