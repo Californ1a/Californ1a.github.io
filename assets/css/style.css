@@ -1,7 +1,7 @@
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /*padding-top: 20px;
+  padding-bottom: 20px;*/
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -14,7 +14,7 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -76,30 +76,6 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
-}
-
-.donor {
-	margin-bottom: 10px;
-}
-
-.donor-image {
-	width: 45px;
-	height: 45px;
-}
-
-.donor > div {
-	display: inline-block;
-}
-
-.donor .donor-name {
-	font-size: 20px;
-}
-
-.donor .donor-amount {
-	float: right;
-	text-align: right;
-	font-size: 20px;
-	color: #61cc13;
 }
 
 h1 {
