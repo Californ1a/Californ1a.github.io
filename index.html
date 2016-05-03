@@ -40,8 +40,8 @@
 		function updateAmount() {
 			$.ajax({
 	                type: "GET",
-					url: "https://donate.childsplaycharity.org/api/event/8a1ee3ee3bbe5acfa0d295af5d257bcb/json",
-	                //url: "https://donate.childsplaycharity.org/api/event/eff5e9ca13c95ce285babe5f60355d21/json",
+					//url: "https://donate.childsplaycharity.org/api/event/8a1ee3ee3bbe5acfa0d295af5d257bcb/json",
+	                url: "https://donate.childsplaycharity.org/api/event/eff5e9ca13c95ce285babe5f60355d21/json",
 	                success: function (data) {
 						// how many decimal places allows
 						var decimal_places = 2;
@@ -77,14 +77,14 @@
 							number: data.total,
 							numberStep: cs
 							}
-						);
+						);*/
 
 						$("#contributions").animateNumber(
 							{
 							number: data.contributions,
 							numberStep: cs
 							}
-						);*/
+						);
 	      
         }
 	    });
