@@ -1,6 +1,6 @@
 <!--
 
-dateFuture = new Date(Date.UTC(2016,4,7,13,00,00)); // 2016,4,7,9,00,00
+dateFuture = new Date(Date.UTC(2015,4,7,13,00,00)); // 2016,4,7,9,00,00
 
 function GetCount(){
 
@@ -23,7 +23,7 @@ function GetCount(){
 			
 			
 			
-			var str = "Distathon is live!";
+			var str = "Distathon is live! (fix this button scrub)";
 			var result = str.link("https://www.twitch.tv/fork_h");
 			document.getElementById('countbox').innerHTML = result;
 			
