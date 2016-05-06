@@ -40,7 +40,7 @@ function GetCount(){
                 if(days != 0 || hours != 0){out += hours +" hour"+((hours!=1)?"s":"")+", ";}
                 if(days != 0 || hours != 0 || mins != 0){out += mins +" minute"+((mins!=1)?"s":"")+", ";}
                 out += secs +" seconds";
-                document.getElementById('countbox').innerHTML=out;
+                document.getElementById('countbox').innerHTML="Time until stream:<br/>"+out;
 
                 setTimeout("GetCount()", 1000);
         }
@@ -78,7 +78,7 @@ function GetDown(){ //second countdown
 		if(days != 0 || hours != 0){out += hours +" hour"+((hours!=1)?"s":"")+", ";}
 		if(days != 0 || hours != 0 || mins != 0){out += mins +" minute"+((mins!=1)?"s":"")+", ";}
 		out += secs +" seconds";
-		document.getElementById('countbox2').innerHTML=out;
+		document.getElementById('countbox2').innerHTML="Time remaining:<br/>"+out;
 
 		setTimeout("GetDown()", 1000);
 	}
