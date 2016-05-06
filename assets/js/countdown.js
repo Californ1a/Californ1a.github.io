@@ -1,6 +1,7 @@
 <!--
 
-dateFuture = new Date(Date.UTC(2015,4,7,13,00,00)); // 2016,4,7,9,00,00
+dateFuture = new Date(Date.UTC(2016,4,7,13,00,00)); // 2016,4,7,9,00,00
+streamEnd = new Date(Date.UTC(2016,4,8,13,00,00));
 
 function GetCount(){
 
@@ -13,26 +14,10 @@ function GetCount(){
 
         // time is already past
         if(amount < 0){
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			var str = "Distathon is live! (fix this button scrub)";
+			var str = "Distathon is live!";
 			var result = str.link("https://www.twitch.tv/fork_h");
 			document.getElementById('countbox').innerHTML = result;
-			
-			
-			
-			
-			
-			
-			
+			GetDown(); //start second countdown
         }
         // date is still good
         else{
@@ -59,6 +44,44 @@ function GetCount(){
 
                 setTimeout("GetCount()", 1000);
         }
+}
+
+function GetDown(){ //second countdown
+	currentTime = new Date();
+	amount2 = streamEnd.getTime() - currentTime.getTime();
+	delete currentTime;
+	
+	if(amount2 < 0){
+		document.getElementById('countbox').innerHTML = null; //remove live button
+		str = "Distathon is over!";
+		result = str.link("https://www.distathon.com");
+		document.getElementById('countbox2').innerHTML = result; //insert finished button
+	}
+	
+	else{
+		days=0;hours=0;mins=0;secs=0;out="";
+		
+		amount2 = Math.floor(amount2/1000);//kill the "milliseconds" so just secs
+
+		days=Math.floor(amount2/86400);//days
+		amount2=amount2%86400;
+
+		hours=Math.floor(amount2/3600);//hours
+		amount2=amount2%3600;
+
+		mins=Math.floor(amount2/60);//minutes
+		amount2=amount2%60;
+
+		secs=Math.floor(amount2);//seconds
+
+		if(days != 0){out += days +" day"+((days!=1)?"s":"")+", ";}
+		if(days != 0 || hours != 0){out += hours +" hour"+((hours!=1)?"s":"")+", ";}
+		if(days != 0 || hours != 0 || mins != 0){out += mins +" minute"+((mins!=1)?"s":"")+", ";}
+		out += secs +" seconds";
+		document.getElementById('countbox2').innerHTML=out;
+
+		setTimeout("GetDown()", 1000);
+	}
 }
 
 window.onload=function(){GetCount();}//call when everything has loaded
