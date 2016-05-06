@@ -1,16 +1,38 @@
 <!--
 
-dateFuture = new Date(2016,4,7,9,00,00);
+dateFuture = new Date(Date.UTC(2016,4,7,13,00,00)); // 2016,4,7,9,00,00
 
 function GetCount(){
 
-        dateNow = new Date();                                                                        //grab current date
-        amount = dateFuture.getTime() - dateNow.getTime();                //calc milliseconds between dates
+        dateNow = new Date(); //grab current date
+		localTime = dateNow.getTime();
+		localOffset = dateNow.getTimezoneOffset() * 60000; //convert time offset to milliseconds
+		utc = localTime+localOffset;
+		amount = dateFuture.getTime() - dateNow.getTime(); //calc milliseconds between dates
         delete dateNow;
 
         // time is already past
         if(amount < 0){
-                document.getElementById('countbox').innerHTML="Now!";
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			var str = "Distathon is live!";
+			var result = str.link("https://www.twitch.tv/fork_h");
+			document.getElementById('countbox').innerHTML = result;
+			
+			
+			
+			
+			
+			
+			
         }
         // date is still good
         else{
