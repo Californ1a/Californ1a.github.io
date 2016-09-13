@@ -12,6 +12,11 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
 }
 
+@font-face {
+	font-family: GunnyRewritten;
+	src: url('fonts/gnyrwn971.ttf');
+}
+
 /**
  * Remove default margin.
  */
@@ -873,7 +878,7 @@ footer a:hover {
   }
 }
 .numbers {
-     font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+     font-family: GunnyRewritten;
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -881,4 +886,3 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) { }
-
