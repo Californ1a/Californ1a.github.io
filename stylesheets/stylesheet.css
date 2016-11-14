@@ -102,6 +102,7 @@ a {
 
 a:active,
 a:hover {
+  text-decoration: underline;
   outline: 0;
 }
 
@@ -450,7 +451,8 @@ a {
   color: #2879d0;
 }
 a:hover {
-  color: #2268b2;
+  text-decoration: underline;
+  //color: #2268b2;
 }
 
 header {
